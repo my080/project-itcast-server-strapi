@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/login",
+      "handler": "Common.login",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/send-email",
+      "handler": "Common.sendEmail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/save-login-status",
+      "handler": "Common.saveLoginStatus",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/logout",
+      "handler": "Common.logout",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/question-report",
+      "handler": "Common.questionReport",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subject-report",
+      "handler": "Common.subjectReport",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

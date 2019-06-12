@@ -1,0 +1,60 @@
+{
+  "connection": "default",
+  "collectionName": "score",
+  "info": {
+    "name": "score",
+    "description": "记录每个学生每次答题结果，练习状态，题目数量，题目分数的分布情况"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "create_time": {
+      "default": "",
+      "type": "date"
+    },
+    "update_time": {
+      "default": "",
+      "type": "date"
+    },
+    "status": {
+      "enum": [
+        "未开始",
+        "进行中",
+        "已完成",
+        "已过期",
+        "已删除"
+      ],
+      "default": "",
+      "type": "enumeration"
+    },
+    "exercise": {
+      "model": "exercise",
+      "via": "scores"
+    },
+    "consumer": {
+      "model": "consumer",
+      "via": "scores"
+    },
+    "total": {
+      "default": "",
+      "type": "integer"
+    },
+    "scores": {
+      "default": "",
+      "type": "json"
+    },
+    "answer_result": {
+      "default": "",
+      "type": "json"
+    },
+    "is_all_right": {
+      "default": false,
+      "type": "boolean"
+    }
+  }
+}

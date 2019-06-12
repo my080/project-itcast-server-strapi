@@ -1,0 +1,80 @@
+{
+  "connection": "default",
+  "collectionName": "question",
+  "info": {
+    "name": "question",
+    "description": "题型表"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "code": {
+      "default": "",
+      "type": "string"
+    },
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "create_time": {
+      "default": "",
+      "type": "date"
+    },
+    "update_time": {
+      "default": "",
+      "type": "date"
+    },
+    "exercises": {
+      "collection": "exercise",
+      "via": "questions",
+      "dominant": true
+    },
+    "subjects": {
+      "collection": "subject",
+      "via": "questions",
+      "dominant": true
+    },
+    "status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "stem": {
+      "default": "",
+      "type": "json"
+    },
+    "options": {
+      "default": "",
+      "type": "json"
+    },
+    "answer": {
+      "default": "",
+      "type": "json"
+    },
+    "desc": {
+      "default": "",
+      "type": "string"
+    },
+    "sub_questions": {
+      "default": "",
+      "type": "json"
+    },
+    "files": {
+      "default": "",
+      "type": "json"
+    },
+    "score": {
+      "default": "",
+      "type": "integer"
+    },
+    "analysis": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

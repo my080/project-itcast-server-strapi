@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "zone",
+    "description": "区域表，归属市级以下，包括区县"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "code": {
+      "default": "",
+      "type": "string"
+    },
+    "create_time": {
+      "default": "",
+      "type": "date"
+    },
+    "update_time": {
+      "default": "",
+      "type": "date"
+    },
+    "type": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "zone",
+        "country"
+      ]
+    },
+    "pid": {
+      "default": "",
+      "type": "string"
+    },
+    "pcode": {
+      "model": "provincescities",
+      "via": "index_code"
+    },
+    "z_code": {
+      "collection": "school",
+      "via": "zid"
+    }
+  }
+}

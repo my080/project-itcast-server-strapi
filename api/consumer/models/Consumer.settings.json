@@ -1,0 +1,102 @@
+{
+  "connection": "default",
+  "collectionName": "consumer",
+  "info": {
+    "name": "consumer",
+    "description": "产品用户"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "password": {
+      "default": "",
+      "type": "password"
+    },
+    "email": {
+      "default": "",
+      "type": "email"
+    },
+    "create_time": {
+      "default": "",
+      "type": "date"
+    },
+    "update_time": {
+      "default": "",
+      "type": "date"
+    },
+    "status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "schools": {
+      "collection": "school",
+      "via": "consumers",
+      "dominant": true
+    },
+    "periods": {
+      "collection": "period",
+      "via": "consumers",
+      "dominant": true
+    },
+    "activate_code": {
+      "default": "",
+      "type": "string"
+    },
+    "subjects": {
+      "collection": "subject",
+      "via": "consumers",
+      "dominant": true
+    },
+    "classes": {
+      "collection": "class",
+      "via": "consumers",
+      "dominant": true
+    },
+    "grades": {
+      "collection": "grade",
+      "via": "consumers",
+      "dominant": true
+    },
+    "sex": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "男",
+        "女"
+      ]
+    },
+    "type": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "学生",
+        "老师",
+        "家长"
+      ]
+    },
+    "exercises": {
+      "collection": "exercise",
+      "via": "consumers"
+    },
+    "scores": {
+      "collection": "score",
+      "via": "consumer"
+    },
+    "head_sculpture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

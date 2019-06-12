@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/exercises",
+      "handler": "Exercise.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exercises-by-user",
+      "handler": "Exercise.findByUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/not-finish-exercises",
+      "handler": "Exercise.notFinishExercises",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wrong-exercises",
+      "handler": "Exercise.wrongExercises",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/has-finish-exercises",
+      "handler": "Exercise.hasFinishExercises",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exercises/count",
+      "handler": "Exercise.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/exercises/:_id",
+      "handler": "Exercise.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/exercises",
+      "handler": "Exercise.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/exercises/:_id",
+      "handler": "Exercise.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/exercises/:_id",
+      "handler": "Exercise.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

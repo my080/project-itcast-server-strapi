@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/periods",
+      "handler": "Period.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/periods/count",
+      "handler": "Period.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/periods/:_id",
+      "handler": "Period.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/periods",
+      "handler": "Period.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/periods/:_id",
+      "handler": "Period.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/periods/:_id",
+      "handler": "Period.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

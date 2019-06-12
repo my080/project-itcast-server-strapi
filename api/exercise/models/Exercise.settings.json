@@ -1,0 +1,83 @@
+{
+  "connection": "default",
+  "collectionName": "exercise",
+  "info": {
+    "name": "exercise",
+    "description": "作业，考试，练习"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "start_time": {
+      "default": "",
+      "type": "date"
+    },
+    "end_time": {
+      "default": "",
+      "type": "date"
+    },
+    "create_time": {
+      "default": "",
+      "type": "date"
+    },
+    "update_time": {
+      "default": "",
+      "type": "date"
+    },
+    "desc": {
+      "default": "",
+      "type": "text"
+    },
+    "type": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "作业",
+        "考试",
+        "练习"
+      ]
+    },
+    "consumers": {
+      "collection": "consumer",
+      "dominant": true,
+      "via": "exercises"
+    },
+    "classes": {
+      "collection": "class",
+      "via": "exercises",
+      "dominant": true
+    },
+    "status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "questions": {
+      "collection": "question",
+      "via": "exercises"
+    },
+    "scores": {
+      "collection": "score",
+      "via": "exercise"
+    },
+    "subjects": {
+      "collection": "subject",
+      "via": "exercises",
+      "dominant": true
+    },
+    "total": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

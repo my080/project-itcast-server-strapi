@@ -1,0 +1,52 @@
+{
+  "connection": "default",
+  "collectionName": "class",
+  "info": {
+    "name": "class",
+    "description": "班级表"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "grades": {
+      "collection": "grade",
+      "via": "classes",
+      "dominant": true
+    },
+    "schools": {
+      "collection": "school",
+      "via": "classes",
+      "dominant": true
+    },
+    "consumers": {
+      "collection": "consumer",
+      "via": "classes"
+    },
+    "create_time": {
+      "default": "",
+      "type": "date"
+    },
+    "update_time": {
+      "default": "",
+      "type": "date"
+    },
+    "status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "exercises": {
+      "collection": "exercise",
+      "via": "classes"
+    }
+  }
+}

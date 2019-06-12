@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/consumers",
+      "handler": "Consumer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/consumers/count",
+      "handler": "Consumer.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/consumers/:_id",
+      "handler": "Consumer.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/consumers",
+      "handler": "Consumer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/studentLogin",
+      "handler": "Consumer.studentLogin",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/init",
+      "handler": "Consumer.init",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/consumers/:_id",
+      "handler": "Consumer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/consumers/:_id",
+      "handler": "Consumer.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
